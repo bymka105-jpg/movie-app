@@ -8,10 +8,9 @@ import { useState } from "react";
 
 export default function Home() {
   return (
-    <div div>
+    <div>
       <Header />
       <HeroSection />
-
       <Footer />
     </div>
   );

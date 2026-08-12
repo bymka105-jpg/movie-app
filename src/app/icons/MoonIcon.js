@@ -15,3 +15,8 @@ export const MoonIcon = (props) => (
     />
   </svg>
 );
+
+// import { Logo } from "../icons/Logo";
+// import { Moon } from "../icons/Moon";
+// import { GenreDownArrow } from "../icons/GenreDownArrow";
+// import { MagnifiyingGlass } from "../icons/MagnifiyingGlass";
