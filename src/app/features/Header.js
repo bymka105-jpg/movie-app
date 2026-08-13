@@ -8,7 +8,7 @@ import { SearchIcons } from "../icons/SearchIcons";
 
 export const Header = () => {
   return (
-    <header className="flex justify-center items-center w-screen bg-blue-50 h-14.75  ">
+    <header className="flex justify-center items-center w-full bg-blue-50 h-14.75  ">
       <div className="w-full px-20 py-20 h-14.75 flex items-center justify-between">
         <div className="flex gap-2">
           <FilmIcon />

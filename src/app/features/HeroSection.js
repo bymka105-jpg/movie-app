@@ -5,7 +5,7 @@ import { RigthArrow } from "../icons/RigthArrow";
 
 export const HeroSection = () => {
   return (
-    <div className="relative">
+    <div className="relative max-w-full">
       <img
         src="Hero/heroSection.jpg"
         className="w-full h-180 bg-center bg-cover"
@@ -19,12 +19,12 @@ export const HeroSection = () => {
             Wicked
           </p>
           <div className="flex">
-            <p className="text-[#ffff] w-12.75 h-7 font-['Inter'] font-semibold text-lg flex ">
+            <div className="text-[#ffff] w-12.75 h-7 font-['Inter'] font-semibold text-lg flex ">
               <div>
                 <StarIcon />
               </div>
               6.9/10
-            </p>
+            </div>
           </div>
         </div>
 
@@ -52,10 +52,8 @@ export const HeroSection = () => {
         <div className="w-[8] h-[8] rounded-full bg-[#FFFFFFCC]"></div>
       </div>
       <div className="absolute right-14 top-73">
-        <button className="w-40px h-40px bg-[#F4F4F5] rounded-full cursor-pointer">
-          <div className="">
-            <RigthArrow />
-          </div>
+        <button className="w-40px h-40px bg-[#F4F4F5] rounded-full cursor-pointer flex items-center justify-center">
+          <RigthArrow />
         </button>
       </div>
     </div>

@@ -23,7 +23,7 @@ export const Footer = () => {
 
       <div className="flex gap-24 ">
         <div className="flex gap-3 flex-col">
-          <p class="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
+          <p className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
             Contact Information
           </p>
           <div className="flex items-center gap-3">
@@ -31,7 +31,7 @@ export const Footer = () => {
             <div>
               <span className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
                 Email:
-                <p class="text-[14px] font-normal leading-5 tracking-normal">
+                <p className="text-[14px] font-normal leading-5 tracking-normal">
                   support@movieZ.com
                 </p>
               </span>
@@ -43,7 +43,7 @@ export const Footer = () => {
             <div>
               <span className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
                 Phone:
-                <p class="text-[14px] font-normal leading-5 tracking-normal">
+                <p className="text-[14px] font-normal leading-5 tracking-normal">
                   +976 (11) 123-4567
                 </p>
               </span>
@@ -52,20 +52,20 @@ export const Footer = () => {
         </div>
 
         <div className="flex gap-3 flex-col">
-          <p class="text-sm font-normal leading-5 tracking-normal text-[#fafafa]">
+          <p className="text-sm font-normal leading-5 tracking-normal text-[#fafafa]">
             Follow us{" "}
           </p>
           <div className="flex gap-3">
-            <span class="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
               Facebook
             </span>
-            <span class="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
               Instagram
             </span>
-            <span class="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
               Twitter
             </span>
-            <span class="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
               Youtube
             </span>
           </div>

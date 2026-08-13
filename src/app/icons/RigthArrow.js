@@ -2,8 +2,8 @@ import * as React from "react";
 export const RigthArrow = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={40}
+    height={40}
     fill="none"
     {...props}
   >
@@ -11,7 +11,7 @@ export const RigthArrow = (props) => (
       stroke="#09090B"
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="m6 12 4-4-4-4"
+      d="m6 33 12-12-12-12"
     />
   </svg>
 );
