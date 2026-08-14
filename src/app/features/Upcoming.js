@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const api_Token =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MjZlNzhmMzQ2MDg3NDM4MGUxOWNmNTg1NjY1NWNmZiIsIm5iZiI6MTc4NjU4OTEwMS4wNTMsInN1YiI6IjZhN2QyZmFkOWJjNWQ2ODhhZGEwNzQ3NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TPD1mBgFC1wc-MaKtW1CsG-uwVb8WwY0TEJHt2ZWoeI";
@@ -11,6 +13,7 @@ export const Upcoming = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const pathname = usePathname();
 
   const getData = async () => {
     const response = await fetch(
@@ -36,20 +39,27 @@ export const Upcoming = () => {
 
   console.log(data, "my data");
 
+  const router = useRouter();
+
+  const navigateToUpcomingPage = () => {
+    router.push("/upcoming");
+  };
+
   return (
     <section className="w-full pb-12 mt-8">
       <div className="mx-auto mb-8 flex w-full max-w-7xl items-center justify-between px-4">
         <h2 className="text-2xl font-bold text-gray-900">Upcoming</h2>
-
-        <Link
-          href="/Upcoming"
-          className="group flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-indigo-600 transition"
-        >
-          <span>See more</span>
-          <span className="transition-transform group-hover:translate-x-1">
-            &rarr;
-          </span>
-        </Link>
+        {pathname !== "/upcoming" && (
+          <Link
+            href="/Upcoming"
+            className="group flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-indigo-600 transition"
+          >
+            <span onClick={navigateToUpcomingPage}>See more</span>
+            <span className="transition-transform group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </Link>
+        )}
       </div>
 
       <div className="mx-auto w-full max-w-7xl px-4">
@@ -57,7 +67,7 @@ export const Upcoming = () => {
         {!loading && errorMessage && <div>{errorMessage}</div>}
         {!loading && !errorMessage && (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-            {data.map((movie) => (
+            {data.slice(0, 10).map((movie) => (
               <Link
                 key={movie.id}
                 href={`/movie/${movie.id}`}

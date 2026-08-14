@@ -5,12 +5,20 @@ import { DownArrow } from "../icons/DownArrow";
 import { FilmIcon } from "../icons/FilmIcon";
 import { MoonIcon } from "../icons/MoonIcon";
 import { SearchIcons } from "../icons/SearchIcons";
+import { navigate } from "next/dist/client/components/segment-cache/navigation";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
+
+  const navigateToHomePage = () => {
+    router.push("/");
+  };
+
   return (
     <header className="flex justify-center items-center w-full bg-blue-50 h-14.75  ">
       <div className="w-full px-20 py-20 h-14.75 flex items-center justify-between">
-        <div className="flex gap-2">
+        <div className="flex gap-2 cursor-pointer" onClick={navigateToHomePage}>
           <FilmIcon />
           <p
             className="font-['Inter'] font-bold italic text-[16px] 

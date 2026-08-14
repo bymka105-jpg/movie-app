@@ -42,7 +42,7 @@ export default function Home() {
   console.log(data, "this is my data");
 
   return (
-    <div className="w-screen h-screen ">
+    <div className="w-screen h-screen overflow-x-hidden">
       {loading && <div>loading...</div>}
       {!loading && errorMessage && <div>{errorMessage}</div>}
       {!loading && !errorMessage && (
@@ -50,8 +50,8 @@ export default function Home() {
           <Header />
           <HeroSection />
           <Upcoming />
-          <Popular data={data} />
-          <TopRated data={data} />
+          <Popular />
+          <TopRated />
           <Footer />
         </div>
       )}
