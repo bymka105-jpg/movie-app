@@ -7,31 +7,31 @@ export const Footer = () => {
   return (
     <div className="w-full h-70 bg-[#4338CA] px-20 py-10 flex gap-122.5">
       <div className="flex flex-col ">
-        <div className="flex gap-2">
+        <div className="flex gap-2 cursor-pointer">
           <FilmIcon />
           <p
             className="font-['Inter'] font-bold italic text-[16px] 
-              leading-5 text-indigo-50 tracking-[0.02em] align-middle"
+              leading-5 text-indigo-50 tracking-[0.02em] align-middle cursor-pointer"
           >
             Movie Z
           </p>
         </div>
-        <p className="Font Sizes/text-sm text-[#FAFAFA]">
+        <p className="Font Sizes/text-sm text-[#FAFAFA] cursor-pointer">
           © 2024 Movie Z. All Rights Reserved.
         </p>
       </div>
 
       <div className="flex gap-24 ">
-        <div className="flex gap-3 flex-col">
-          <p className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
+        <div className="flex gap-3 flex-col ">
+          <p className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA] ">
             Contact Information
           </p>
           <div className="flex items-center gap-3">
             <EmailIcon />
             <div>
-              <span className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA]">
+              <span className="font-inter text-[14px] font-normal leading-5 tracking-normal text-[#FAFAFA] cursor-pointer">
                 Email:
-                <p className="text-[14px] font-normal leading-5 tracking-normal">
+                <p className="text-[14px] font-normal leading-5 tracking-normal cursor-pointer">
                   support@movieZ.com
                 </p>
               </span>
@@ -52,20 +52,20 @@ export const Footer = () => {
         </div>
 
         <div className="flex gap-3 flex-col">
-          <p className="text-sm font-normal leading-5 tracking-normal text-[#fafafa]">
+          <p className="text-sm font-normal leading-5 tracking-normal text-[#fafafa] ">
             Follow us{" "}
           </p>
           <div className="flex gap-3">
-            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa] cursor-pointer">
               Facebook
             </span>
-            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa] cursor-pointer">
               Instagram
             </span>
-            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa] cursor-pointer">
               Twitter
             </span>
-            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa]">
+            <span className="text-sm font-medium leading-5 tracking-normal text-[#fafafa] cursor-pointer">
               Youtube
             </span>
           </div>

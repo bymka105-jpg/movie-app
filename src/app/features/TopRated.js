@@ -50,7 +50,7 @@ export const TopRated = () => {
         <h2 className="text-2xl font-bold text-gray-900">Top Rated</h2>
         {pathname !== "/toprated" && (
           <Link
-            href="/top-rated"
+            href="/toprated"
             className="group flex items-center gap-1 text-sm font-semibold text-gray-900 transition hover:text-indigo-600"
           >
             <span onClick={navigateToTopRatedPage}>See more</span>

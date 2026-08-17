@@ -37,8 +37,6 @@ export const Upcoming = () => {
       });
   }, []);
 
-  console.log(data, "my data");
-
   const router = useRouter();
 
   const navigateToUpcomingPage = () => {
@@ -51,7 +49,7 @@ export const Upcoming = () => {
         <h2 className="text-2xl font-bold text-gray-900">Upcoming</h2>
         {pathname !== "/upcoming" && (
           <Link
-            href="/Upcoming"
+            href="/upcoming"
             className="group flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-indigo-600 transition"
           >
             <span onClick={navigateToUpcomingPage}>See more</span>
