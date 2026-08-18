@@ -1,17 +1,53 @@
-"Use client";
+"use client";
 import Link from "next/link";
 import { PlayIcon } from "lucide-react";
-import { Footer } from "../features/Footer";
-import { Header } from "../features/Header";
+import { Footer } from "../../features/Footer";
+import { Header } from "../../features/Header";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function UpcomingPage() {
+const api_Token =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MjZlNzhmMzQ2MDg3NDM4MGUxOWNmNTg1NjY1NWNmZiIsIm5iZiI6MTc4NjU4OTEwMS4wNTMsInN1YiI6IjZhN2QyZmFkOWJjNWQ2ODhhZGEwNzQ3NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TPD1mBgFC1wc-MaKtW1CsG-uwVb8WwY0TEJHt2ZWoeI";
+
+export default function MovieDetailPage() {
+  const params = useParams();
+  console.log("my id");
+
+  console.log(params);
+
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const getMovieData = async () => {
+    const response = await fetch(
+      "https://api.themoviedb.org/3/movie/${movieId}?language=en-US",
+      {
+        headers: {
+          Authorization: `Bearer ${api_Token}`,
+        },
+      },
+    );
+    const jsonData = await response.json();
+    return jsonData.result;
+  };
+
+  useEffect(() => {
+    getMovieData()
+      .then((data) => setData(data))
+      .catch(() => setErrorMessage("MOVIE API ERROR"))
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <main className="w-screen h-screen">
       <Header />
       <div className="flex w-screen  px-46 justify-center gap-6 ">
         <div className="w-270 flex justify-between">
           <div className="w-52">
-            <p class="font-['Inter'] font-extrabold text-[36px] leading-10 tracking-[-0.9px] text-gray-[#09090B]">
+            <p class=" font-extrabold text-[36px] leading-10 tracking-[-0.9px] text-gray-[#09090B]">
               Wicked
             </p>
             <p class="font-['Inter'] text-lg  tracking-normal text-[#09090B]">

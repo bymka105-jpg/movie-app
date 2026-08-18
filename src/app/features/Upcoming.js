@@ -68,7 +68,7 @@ export const Upcoming = () => {
             {data.slice(0, 10).map((movie) => (
               <Link
                 key={movie.id}
-                href={`/movie/${movie.id}`}
+                href={`/detail/${movie.id}`}
                 className="group flex cursor-pointer flex-col rounded-xl bg-[#F4F4F5] p-2 transition hover:shadow-md"
               >
                 <div className="relative mb-3 aspect-2/3 w-full overflow-hidden rounded-lg">

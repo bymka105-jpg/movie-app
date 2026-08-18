@@ -15,7 +15,7 @@ export const TopRated = () => {
 
   const getData = async () => {
     const response = await fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1",
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
       {
         headers: {
           Authorization: `Bearer ${api_Token}`,
@@ -69,7 +69,7 @@ export const TopRated = () => {
             {data.slice(0, 10).map((movie) => (
               <Link
                 key={movie.id}
-                href={`/movie/${movie.id}`}
+                href={`/detail/${movie.id}`}
                 className="group flex cursor-pointer flex-col rounded-xl bg-[#F4F4F5] p-2 transition hover:shadow-md"
               >
                 <div className="relative mb-3 aspect-2/3 w-full overflow-hidden rounded-lg">
