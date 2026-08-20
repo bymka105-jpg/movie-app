@@ -16,7 +16,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex justify-center items-center w-full bg-blue-50 h-14.75  ">
+    <header className="flex justify-center items-center w-full bg-blue-50">
       <div className="w-full px-20 py-20 h-14.75 flex items-center justify-between">
         <div className="flex gap-2 cursor-pointer" onClick={navigateToHomePage}>
           <FilmIcon />

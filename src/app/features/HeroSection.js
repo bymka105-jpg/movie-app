@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <div className="relative max-w-full">
       <img
         src="Hero/heroSection.jpg"
-        className="w-full h-180 bg-center bg-cover"
+        className="w-full h-180 bg-center bg-cover object-center object-cover"
       ></img>
       <div className="absolute left-35 top-44.5 flex flex-col gap-4 ">
         <div>

@@ -5,7 +5,7 @@ import { Header } from "../Header";
 
 export default function loadingMain() {
   return (
-    <main className="w-screen  ">
+    <main className="w-screen flex justify-center flex-col">
       <Header />
       {/* heroSection */}
 
